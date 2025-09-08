@@ -31,7 +31,7 @@ export default function Favorites() {
 
   return (
     <div>
-      <h2>Favoritter</h2>
+      <h2>Favorites</h2>
       <StatusMessage
         loading={false}
         error={null}

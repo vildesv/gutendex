@@ -6,7 +6,7 @@ export async function fetchBooks(query = "", page = 1) {
     : `${BASE_URL}?page=${page}`;
 
   const res = await fetch(url);
-  if (!res.ok) throw new Error("Error fetching books");
+  if (!res.ok) throw new Error("Feil ved henting av bøker.");
   return res.json();
 }
 
@@ -17,12 +17,12 @@ export async function fetchBooksByCategory(category, page = 1) {
   // API-et bruker "subjects" i stedet for "topic"
   const url = `${BASE_URL}?subjects=${encodeURIComponent(category.toLowerCase())}&page=${page}`;
   const res = await fetch(url);
-  if (!res.ok) throw new Error("Error fetching books by category");
+  if (!res.ok) throw new Error("Kunne ikke hente bøker for kategori.");
   return res.json();
 }
 
 export async function fetchBookDetails(id) {
   const res = await fetch(`${BASE_URL}/${id}`);
-  if (!res.ok) throw new Error("Could not fetch book details");
+  if (!res.ok) throw new Error("Kunne ikke hente bokdetaljer.");
   return res.json();
 }

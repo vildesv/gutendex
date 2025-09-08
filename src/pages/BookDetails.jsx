@@ -20,7 +20,7 @@ export default function BookDetails() {
       setError(null);
       try {
         const data = await fetchBookDetails(id);
-        if (!data) throw new Error("No book found");
+        if (!data) throw new Error("No book found.");
         setBook(data);
       } catch (err) {
         console.error(err);
@@ -61,11 +61,11 @@ export default function BookDetails() {
             <div className="book-cover-placeholder">No picture available</div>
           )}
 
-          <p><strong>Forfatter:</strong> {book.authors?.map((a) => a.name).join(", ") || "Unknown"}</p>
-          <p><strong>Nedlastninger:</strong> {book.download_count}</p>
-          <p><strong>Språk:</strong> {book.languages?.join(", ") || "Unknown"}</p>
+          <p><strong>Author:</strong> {book.authors?.map((a) => a.name).join(", ") || "Unknown"}</p>
+          <p><strong>Downloads:</strong> {book.download_count}</p>
+          <p><strong>Language:</strong> {book.languages?.join(", ") || "Unknown"}</p>
           {book.subjects && book.subjects.length > 0 && (
-            <p><strong>Kategorier:</strong> {book.subjects.join(", ")}</p>
+            <p><strong>Categories:</strong> {book.subjects.join(", ")}</p>
           )}
 
           {book.formats["text/html"] && (
@@ -75,7 +75,7 @@ export default function BookDetails() {
               rel="noreferrer"
               className="read-link"
             >
-              Les boken
+              Read the book
             </a>
           )}
 

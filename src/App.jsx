@@ -11,7 +11,7 @@ function App() {
         <Outlet />
       </main>
       <footer>
-        <p className="footer-text">© {new Date().getFullYear()} Gutendex by Vilde Svenkesen</p>
+        <p className="footer-text">© {new Date().getFullYear()} Gutendex av Vilde Svenkesen</p>
       </footer>
     </div>
   );
