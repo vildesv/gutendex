@@ -1,4 +1,4 @@
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom"; 
 import BookList from "../components/BookList.jsx";
 import usePaginatedBooks from "../hooks/usePaginatedBooks.js";
 import StatusMessage from "../components/StatusMessage.jsx";
@@ -8,7 +8,6 @@ export default function Home() {
   const [searchParams] = useSearchParams();
   const query = searchParams.get("search") || "";
 
-  // Bruk hooken med søk
   const { books, loading, error, page, hasNext, nextPage, prevPage } =
     usePaginatedBooks(fetchBooks, query);
 
@@ -23,14 +22,20 @@ export default function Home() {
       >
         <BookList books={books} />
 
-        <div className="pagination-container" style={{ marginTop: "1rem" }}>
-          <button onClick={prevPage} disabled={page === 1}>
-            ← Previous
-          </button>
-          <span style={{ margin: "0 1rem" }}>Page {page}</span>
-          <button onClick={nextPage} disabled={!hasNext}>
-            Next →
-          </button>
+        <div className="pagination-container">
+          {page > 1 ? (
+            <button onClick={prevPage}>← Previous</button>
+          ) : (
+            <div className="pagination-placeholder"></div>
+          )}
+
+          <span>Page {page}</span>
+
+          {hasNext ? (
+            <button onClick={nextPage}>Next →</button>
+          ) : (
+            <div className="pagination-placeholder"></div>
+          )}
         </div>
       </StatusMessage>
     </div>

@@ -29,7 +29,7 @@ export default function Category() {
 
   return (
     <div>
-      <h2>Kategori: {topic}</h2>
+      <h2>Category: {topic}</h2>
 
       <StatusMessage
         loading={loading}
@@ -38,14 +38,20 @@ export default function Category() {
       >
         <BookList books={books} />
 
-        <div className="pagination-container" style={{ marginTop: "1rem" }}>
-          <button onClick={prevPage} disabled={page === 1}>
-            ← Forrige
-          </button>
-          <span style={{ margin: "0 1rem" }}>Side {page}</span>
-          <button onClick={nextPage} disabled={!hasNext}>
-            Neste →
-          </button>
+        <div className="pagination-container">
+          {page > 1 ? (
+            <button onClick={prevPage}>← Previous</button>
+          ) : (
+            <div className="pagination-placeholder"></div>
+          )}
+
+          <span>Page {page}</span>
+
+          {hasNext ? (
+            <button onClick={nextPage}>Next →</button>
+          ) : (
+            <div className="pagination-placeholder"></div>
+          )}
         </div>
       </StatusMessage>
     </div>
