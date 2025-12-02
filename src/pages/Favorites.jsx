@@ -1,6 +1,6 @@
 import useLocalStorage from "../hooks/useLocalStorage.js";
 import StatusMessage from "../components/StatusMessage.jsx";
-import { FaTrash } from "react-icons/fa"; // ikon for fjern
+import { FaTrash } from "react-icons/fa"; // icon for remove-btn
 
 export default function Favorites() {
   const [favorites, setFavorites] = useLocalStorage("favorites", []);

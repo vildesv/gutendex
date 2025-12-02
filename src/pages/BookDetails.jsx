@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { fetchBookDetails } from "../api.js";
 import useLocalStorage from "../hooks/useLocalStorage.js";
 import StatusMessage from "../components/StatusMessage.jsx";
-import "./BookDetails.css"; // Legger styling her
+import "./BookDetails.css"; // Styling for BookDetails-page
 
 export default function BookDetails() {
   const { id } = useParams();

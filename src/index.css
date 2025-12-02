@@ -1,13 +1,13 @@
 :root {
-  /* Rich Black Fargepalett */
-  --background: #101318;       /* Hovedbakgrunn */
-  --panel-bg: #1F2933;         /* Paneler / kort / navbar */
-  --text-color: #b4bfd4;       /* Primær tekst */
-  --secondary: #9CA3AF;        /* Sekundær tekst */
-  --accent: #6b93c2;           /* Primær aksent */
-  --highlight: #4d6a8b;        /* Viktige aksenter */
-  --footer-bg: #111827;        /* Footer bakgrunn */
-  --footer-text: #9CA3AF;      /* Footer tekst */
+  /* Color palette */
+  --background: #101318;       /* Main background */
+  --panel-bg: #1F2933;         /* Panels / card / navbar */
+  --text-color: #b4bfd4;       /* Primary text */
+  --secondary: #9CA3AF;        /* Secondary text */
+  --accent: #6b93c2;           /* Primary accent */
+  --highlight: #4d6a8b;        /* Important accents */
+  --footer-bg: #111827;        /* Footer background */
+  --footer-text: #9CA3AF;      /* Footer text */
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

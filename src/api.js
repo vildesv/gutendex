@@ -10,9 +10,7 @@ export async function fetchBooks(query = "", page = 1) {
   return res.json();
 }
 
-/**
- * Henter bøker basert på kategori (subjects)
- */
+// Henter bøker basert på kategori (subjects)
 export async function fetchBooksByCategory(category, page = 1) {
   // API-et bruker "subjects" i stedet for "topic"
   const url = `${BASE_URL}?subjects=${encodeURIComponent(category.toLowerCase())}&page=${page}`;
