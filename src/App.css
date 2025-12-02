@@ -105,7 +105,7 @@ main {
   padding: 0 1rem;
 }
 
-/* --- BookList horisontalt --- */
+/* BookList horizontal */
 .book-list {
   display: flex;
   gap: 1.5rem;
@@ -127,7 +127,7 @@ main {
   background: var(--background);
 }
 
-/* --- BookCard --- */
+/* BookCard */
 .book-card {
   background: var(--panel-bg);
   color: var(--text-color);
@@ -168,7 +168,7 @@ main {
   color: var(--secondary);
 }
 
-/* Favorittikon */
+/* Favorite-icon */
 .favorite-icon {
   position: absolute;
   top: 10px;
@@ -184,7 +184,7 @@ main {
   color: #ff6b6b;
 }
 
-/* --- Pagination --- */
+/* Pagination */
 .pagination-container {
   display: flex;
   align-items: center;
@@ -219,7 +219,7 @@ main {
   font-weight: 500;
 }
 
-/* --- Footer --- */
+/* Footer */
 footer {
   background-color: var(--footer-bg); 
   text-align: center;
@@ -235,7 +235,7 @@ footer p {
   font-weight: 400;
 }
 
-/* Footer responsiv justering */
+/* Footer - responsive adjusments */
 @media (max-width: 600px) {
   footer {
     padding: 1rem;

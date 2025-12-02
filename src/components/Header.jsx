@@ -1,6 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
+import logo from "../assets/gutendex-logo.png";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -30,7 +31,7 @@ export default function Header() {
 
   return (
     <header>
-      <h1>Gutendex</h1>
+      <img src={logo} alt="Gutendex logo" className="logo" />
       <nav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/favorites">Favorites</NavLink>
@@ -40,7 +41,7 @@ export default function Header() {
           </NavLink>
         ))}
 
-        {/* Søkefelt med ikon */}
+        {/* Search field with icon */}
         <form className="search-form" onSubmit={handleSearch}>
           <input
             type="text"
